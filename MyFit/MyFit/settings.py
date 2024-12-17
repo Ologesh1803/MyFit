@@ -15,6 +15,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Spoonacular API key
+API_KEY = '0fd59c8687a149f18a6cf5730d8966f2'
+BASE_URL = 'https://api.spoonacular.com/recipes/complexSearch'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
