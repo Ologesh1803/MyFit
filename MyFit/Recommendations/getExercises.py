@@ -3,7 +3,7 @@ from .models import Exercises
 from django.conf import settings
 
 
-def getExercises(file_path):
+def getExercisesForModel(file_path):
     '''
     Gets exercises from a JSON file and uplaods them to Exercises model.
     

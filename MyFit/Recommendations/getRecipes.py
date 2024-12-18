@@ -6,7 +6,7 @@ from django.conf import settings
 API_KEY = settings.SPOONACULAR_API_KEY
 BASE_URL = 'https://api.spoonacular.com/recipes/complexSearch'
 
-def getRecipes():
+def getRecipesForModel():
     '''
     Gets recipes from Spoonacular API and uploads them to Recipes model.
     '''
