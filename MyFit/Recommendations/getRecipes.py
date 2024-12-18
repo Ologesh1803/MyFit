@@ -22,19 +22,12 @@ def getRecipes():
         recipes = response.json().get('results', [])
 
         for recipe in recipes:
-
-            # Extract relevant data
-            name = recipe.get('title')
-            vegetarian = recipe.get('vegetarian')
-            ready_mins = recipe.get('readyInMinutes')
-            link = recipe.get('sourceUrl')
-
-            # Save to the database
+            # Extract relevant data and save to the database
             Recipes.objects.create(
-                name=name,
-                vegetarian=vegetarian,
-                ready_mins=ready_mins,
-                link=link
+                name=recipe.get('title'),
+                vegetarian=recipe.get('vegetarian'),
+                ready_mins=recipe.get('readyInMinutes'),
+                link=recipe.get('sourceUrl')
             )
 
         print("Recipes successfully added to the database.")
