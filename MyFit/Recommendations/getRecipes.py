@@ -10,7 +10,7 @@ def getRecipesForModel():
     Gets recipes from Spoonacular API and uploads them to Recipes model.
     '''
     
-    # Define parameters for the API call
+    # Define parameters for the API call tesssssst
     API_calls = 0
     total_results = 1
     offset = 0
