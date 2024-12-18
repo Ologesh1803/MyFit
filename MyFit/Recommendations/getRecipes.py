@@ -2,7 +2,6 @@ import requests
 from .models import Recipes
 from django.conf import settings
 
-# Spoonacular API key (ask chat if i keep this in settings.py how to reference it in this file)
 API_KEY = settings.SPOONACULAR_API_KEY
 BASE_URL = 'https://api.spoonacular.com/recipes/complexSearch'
 
@@ -49,3 +48,10 @@ def getRecipesForModel():
             break
     
     print("Recipes successfully added to the database.")
+
+# need to finish documentation of function, may need to change params
+def getRecipesForUser(user_preferences):
+    return Recipes.objects.filter(
+        vegetarian=user_preferences.get('vegetarian'),
+        ready_mins=user_preferences.get('ready_mins')
+    )
